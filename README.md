@@ -34,12 +34,8 @@ The system uses a hybrid detection approach to improve prediction accuracy and r
 *   **Rule-Based Analysis:** Analyzes URLs for suspicious patterns such as fake domains, excessive subdomains, insecure HTTP usage, and suspicious keywords[cite: 8].
 *   **Trusted Domain Verification:** Cross-checks the URL against a database of known safe domains[cite: 4, 10].
 
-##Sceenshots
+## Sceenshots
 <img width="963" height="1300" alt="image" src="https://github.com/user-attachments/assets/185f13c8-9b5c-4c83-a44a-174009db2fe9" />
 <img width="949" height="429" alt="image" src="https://github.com/user-attachments/assets/3db847cf-7f92-4136-b603-270e64321588" />
 <img width="949" height="429" alt="image" src="https://github.com/user-attachments/assets/0bc92921-56a2-47b3-8974-f62365442a3e" />
 <img width="925" height="894" alt="image" src="https://github.com/user-attachments/assets/308d3288-f164-4472-b0b6-e7815358bdc1" />
-
-
-
-
