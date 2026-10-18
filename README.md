@@ -1,187 +1,44 @@
-# Multi-Cloud Storage Management System
+# Link Guard
 
-A web-based application designed to help users manage files across multiple cloud storage providers through one unified interface. The project aims to simplify cloud account management, file browsing, and file transfers between connected services.
+Link Guard is an AI-powered secure and intelligent URL protection system[cite: 4]. The main objective of this platform is to detect malicious links and provide secure URL shortening services[cite: 4]. The system combines Machine Learning, Rule-Based Detection, and Trusted Domain Verification to effectively identify suspicious and phishing URLs[cite: 4].
 
-## Overview
+## 🚀 Key Features
 
-Users commonly store files across different platforms, such as Google Drive, Dropbox, and OneDrive. Switching between services to locate or transfer files can be inconvenient. The Multi-Cloud Storage Management System provides a centralized interface to connect supported cloud accounts and manage files more efficiently.
+*   **Secure URL Shortening:** Allows users to create shortened URLs securely[cite: 6].
+*   **Malicious URL Detection:** Real-time detection of phishing and malicious links[cite: 10].
+*   **Risk Analysis:** Generates risk scores and risk percentages for scanned URLs[cite: 8, 10].
+*   **Dashboard Analytics:** Provides users with dashboard statistics, link activity tracking, and visit counts[cite: 6].
+*   **History Tracking:** Maintains a history of shortened URLs and a scan history of malicious links[cite: 4, 8].
+*   **Trusted Domain Checking:** Verifies domains against a whitelist to reduce false detections[cite: 10].
 
-The project report describes a React.js frontend, a Python backend, and a MySQL database. Cloud-provider integrations use authentication tokens and should protect credentials and file-transfer operations.
+## 💻 Technology Stack
 
-## Objectives
+**Frontend**
+*   **React JS:** Used for developing a dynamic, responsive user interface including the dashboard, URL scanner, and URL shortener[cite: 11].
 
-- Provide a single interface for managing multiple cloud storage accounts.
-- Allow users to connect and view supported cloud accounts.
-- Display files available from connected providers.
-- Support file transfers between supported cloud services.
-- Store user, cloud-account, and file-metadata information in a database.
-- Improve usability and protect account access through secure authentication.
+**Backend**
+*   **Flask:** A lightweight Python web framework used for handling URL scanning requests, shortening operations, and REST APIs[cite: 11].
+*   **MySQL:** Used to store user information, shortened URLs, scan history, risk analysis results, and visit statistics[cite: 12].
 
-## Main Features
+**Machine Learning**
+*   **Scikit-learn:** Utilized for model training, prediction, and feature extraction[cite: 12].
+*   **TF-IDF Vectorization:** Converts URLs into numerical feature vectors to identify suspicious patterns[cite: 13].
+*   **Random Forest Classifier:** A supervised machine learning algorithm used for high-accuracy URL classification[cite: 13].
+*   **Pandas & NumPy:** Used for reading datasets, data cleaning, matrix operations, and manipulation[cite: 13, 14].
+*   **Joblib:** Used for saving and loading trained machine learning models and vectorizers to the backend[cite: 14].
 
-- **Unified dashboard:** Access connected cloud services from one interface.
-- **Cloud account management:** Connect and view supported cloud accounts.
-- **File listing:** Browse files available through connected providers.
-- **Cross-cloud transfer:** Transfer files between supported providers where integration and permissions allow.
-- **Authentication:** Use the cloud providers' supported authorization flow and token handling.
-- **Metadata management:** Store relevant user, account, and file metadata in MySQL.
+## 🧠 Threat Detection Approach
 
-> Feature availability depends on which provider APIs and integrations are implemented in the repository.
+The system uses a hybrid detection approach to improve prediction accuracy and reduce false positives and negatives[cite: 4, 8]. The pipeline includes:
+*   **Machine Learning Prediction:** Uses a Random Forest model trained on phishing and safe URL datasets[cite: 4, 10]. 
+*   **Rule-Based Analysis:** Analyzes URLs for suspicious patterns such as fake domains, excessive subdomains, insecure HTTP usage, and suspicious keywords[cite: 8].
+*   **Trusted Domain Verification:** Cross-checks the URL against a database of known safe domains[cite: 4, 10].
 
-## Technology Stack
+## 👥 Team 
 
-| Layer | Technology |
-|---|---|
-| Frontend | React.js |
-| Backend | Python |
-| Database | MySQL |
-| Cloud storage integrations | Provider APIs, such as Google Drive, Dropbox, and OneDrive |
-| Authentication | Provider-supported token-based authorization |
+This project was developed in partial fulfillment for the award of the degree of M.C.A. (Semester II, 2025-2026) at DY Patil Deemed to be University, Navi Mumbai[cite: 1]. 
 
-## System Requirements
-
-Install the tools required by the actual code in this repository. The project report identifies these core technologies:
-
-- Node.js and npm for the React.js frontend
-- Python 3 for the backend
-- MySQL Server
-- API credentials and permissions for each cloud provider you intend to connect
-
-The exact versions and Python packages depend on the implementation. Check the frontend package manifest and backend dependency file (for example, `package.json`, `requirements.txt`, or `pyproject.toml`) if they are present.
-
-## Getting Started
-
-The report describes the overall technology stack but does not specify the repository's exact commands, environment-variable names, or database schema. Use the following as a general setup checklist and adjust it to match the source code.
-
-### 1. Clone the repository
-
-```bash
-git clone <repository-url>
-cd <repository-folder>
-```
-
-### 2. Configure the backend
-
-1. Open the backend directory.
-2. Create and activate a Python virtual environment.
-3. Install the dependencies listed by the project, if a dependency file is provided.
-4. Configure the database connection and cloud-provider API credentials using the configuration method supported by the code.
-5. Start the backend using the entry point documented in the source code.
-
-Example virtual-environment commands:
-
-```bash
-python -m venv .venv
-```
-
-Windows:
-
-```bash
-.venv\Scripts\activate
-```
-
-macOS/Linux:
-
-```bash
-source .venv/bin/activate
-```
-
-If the repository contains `requirements.txt`, install its packages with:
-
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Configure the database
-
-1. Start MySQL Server.
-2. Create a database for the application.
-3. Configure the backend with the database name, host, username, and password.
-4. Run the SQL schema or migration steps provided by the repository.
-
-Do not commit real database passwords or API secrets to source control.
-
-### 4. Configure and start the frontend
-
-1. Open the frontend directory.
-2. Install dependencies:
-
-```bash
-npm install
-```
-
-3. Configure the backend URL if the frontend uses an environment variable.
-4. Start the development server using the script defined in `package.json`, commonly:
-
-```bash
-npm start
-```
-
-Some React projects use `npm run dev` instead. Check `package.json` for the correct command.
-
-## Typical Workflow
-
-1. Open the application.
-2. Sign in or complete the authentication flow, if implemented.
-3. Connect an available cloud storage provider.
-4. View files from connected accounts.
-5. Select a source and destination for a file transfer, if supported.
-6. Check the application's status or result message to confirm the operation.
-
-## Security Notes
-
-- Never commit API keys, OAuth client secrets, access tokens, or production passwords.
-- Use environment variables or a local, untracked configuration file for secrets.
-- Request only the permissions needed for the features being used.
-- Protect tokens and avoid printing them in logs.
-- Validate file operations and handle provider API errors safely.
-- Use test accounts and non-sensitive files during development.
-
-## Project Structure
-
-The exact folder layout depends on the repository. A typical arrangement for this stack might look like:
-
-```text
-project/
-├── frontend/       # React.js user interface
-├── backend/        # Python application and API endpoints
-├── database/       # SQL schema or migration files, if included
-├── .gitignore
-└── README.md
-```
-
-Treat this as an illustrative layout; use the actual directory names in the repository.
-
-## Troubleshooting
-
-- **Frontend dependencies fail:** Confirm Node.js and npm are installed, then check `package.json`.
-- **Backend dependencies fail:** Confirm Python is installed and install packages from the repository's dependency file.
-- **Database connection fails:** Check that MySQL is running and the configured connection details are correct.
-- **Cloud account connection fails:** Verify provider API setup, redirect/callback URLs, requested permissions, and token configuration.
-- **File transfer fails:** Check source/destination permissions, provider API limits, network access, and backend logs. Avoid sharing logs that contain tokens or secrets.
-
-## Current Status
-
-This README is based on the project report titled **Multi-Cloud Storage Management System**. It describes the intended system and technology stack; confirm the actual implemented features and commands against the repository before publishing.
-
-## Contributing
-
-1. Create a branch for your change.
-2. Make and test your updates.
-3. Do not include secrets or private files in commits.
-4. Submit a pull request with a concise description of the change.
-
-## License
-
-Add the license used by this repository. If no license has been selected, the project should not be assumed to be open source by default.
-## Photos 
-<img width="1102" height="535" alt="image" src="https://github.com/user-attachments/assets/9d502db8-a07f-4a9b-87fb-5c8f8bd444d8" />
-<img width="1069" height="523" alt="image" src="https://github.com/user-attachments/assets/a58da1e5-5764-4545-b291-44a0762865f3" />
-<img width="1079" height="511" alt="image" src="https://github.com/user-attachments/assets/7e6c179f-3354-4f35-8ca4-6f2bb5a5ec6b" />
-<img width="1079" height="511" alt="image" src="https://github.com/user-attachments/assets/d078de5c-5eaa-4223-8657-674e58a67276" />
-<img width="1080" height="509" alt="image" src="https://github.com/user-attachments/assets/e5113cb1-017c-4d19-bb14-b636dfb2c352" />
-<img width="1079" height="513" alt="image" src="https://github.com/user-attachments/assets/22d969e4-a206-4062-8a04-754d51ea92d4" />
-<img width="1080" height="510" alt="image" src="https://github.com/user-attachments/assets/8826c7a5-e543-4ede-b46d-f6de05c0d02f" />
-<img width="1080" height="514" alt="image" src="https://github.com/user-attachments/assets/5d4f5be9-43f4-443f-8372-fb49cacdfd9a" />
-<img width="1080" height="514" alt="image" src="https://github.com/user-attachments/assets/e09456bd-3640-4d59-9d65-c815864e2a54" />
-<img width="1079" height="512" alt="image" src="https://github.com/user-attachments/assets/17c42a5f-6c49-41de-b06c-f621b528ab20" />
+*   **Sohan Rahul Patil**[cite: 1]
+*   **Ved Ashok Kadam**[cite: 1]
+*   **Yash Dattatray Dubal**[cite: 1]
+*   **Project Guide:** Dr. Ritu Jain[cite: 2]
