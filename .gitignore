@@ -1,0 +1,20 @@
+# JavaScript / Node.js
+node_modules/
+dist/
+build/
+
+# Python
+venv/
+env/
+__pycache__/
+*.pyc
+
+# Environment Variables (Never upload API keys or passwords)
+.env
+.env.local
+
+# OS Generated Files
+.DS_Store
+Thumbs.db
+api/urlshortner.json
+api/model.pkl

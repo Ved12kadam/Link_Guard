@@ -1,0 +1,6 @@
+indexes:
+- kind: url
+  properties:
+  - name: user_session
+  - name: timestamp
+    direction: desc

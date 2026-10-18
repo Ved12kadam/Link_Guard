@@ -1,0 +1,450 @@
+.mainPage {
+  position: relative;
+  min-height: 100vh;
+  background-color: #0a0a0a;
+  color: white;
+  overflow-x: hidden;
+}
+
+.backgroundGradients {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+}
+
+.backgroundOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, #0a0a0a, rgba(10, 10, 10, 0.9), #0a0a0a);
+}
+
+.gradientBlue {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 500px;
+  width: 500px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+  filter: blur(100px);
+  animation: float 6s ease-in-out infinite;
+}
+
+.gradientPurple {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 500px;
+  width: 500px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+  filter: blur(100px);
+  animation: float 8s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  33% {
+    transform: translateY(-20px) translateX(10px);
+  }
+  66% {
+    transform: translateY(10px) translateX(-10px);
+  }
+}
+
+.container {
+  position: relative;
+  z-index: 10;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.logoText {
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2rem;
+  filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.3));
+}
+
+.logoSubtext {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.userProfile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.userProfile:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.userName {
+  font-weight: 600;
+  color: white;
+  font-size: 0.875rem;
+}
+
+.userEmail {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.profileActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.profileButton {
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.profileButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.profileIcon {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Stats Section */
+.statsSection {
+  margin: 1rem 0;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.statCard {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.statCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.statIcon {
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+  backdrop-filter: blur(10px);
+}
+
+.statIconSvg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.statContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.statValue {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: white;
+}
+
+.statLabel {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Tab Navigation */
+.tabSection {
+  margin: 1rem 0;
+}
+
+.tabNavigation {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+}
+
+.tabButton {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background: transparent;
+  border: none;
+  border-radius: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  flex: 1;
+  text-align: left;
+}
+
+.tabButton:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.tabButtonActive {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.tabIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+}
+
+.tabContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.tabName {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.tabDescription {
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+
+.tabIndicator {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2rem;
+  height: 2px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  border-radius: 1px;
+}
+
+/* Main Content */
+.mainContent {
+  flex: 1;
+  margin: 1rem 0;
+}
+
+.contentContainer {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 2rem;
+  min-height: 400px;
+}
+
+/* Quick Actions */
+.quickActions {
+  margin: 1rem 0 2rem 0;
+}
+
+.quickActionsHeader {
+  margin-bottom: 1rem;
+}
+
+.quickActionsTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
+  margin: 0;
+}
+
+.quickActionsList {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.quickActionButton {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.75rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.quickActionButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.quickActionIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+    gap: 1.5rem;
+  }
+
+  .headerContent {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .userProfile {
+    align-self: stretch;
+  }
+
+  .tabNavigation {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .tabButton {
+    flex: none;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .quickActionsList {
+    flex-direction: column;
+  }
+
+  .quickActionButton {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .logoText {
+    font-size: 1.5rem;
+  }
+
+  .contentContainer {
+    padding: 1.5rem;
+  }
+
+  .userInfo {
+    display: none;
+  }
+
+  .profileActions {
+    margin-left: auto;
+  }
+}

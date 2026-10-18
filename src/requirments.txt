@@ -1,0 +1,7 @@
+npm install react-router-dom;
+// install react router dom //
+
+npm install lucide-react;
+
+// insatll lucide-react //
+

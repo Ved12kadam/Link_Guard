@@ -1,0 +1,91 @@
+.features {
+  padding: 6rem 1rem;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.header {
+  max-width: 58rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1.875rem;
+  line-height: 1.1;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.description {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.125rem;
+}
+
+.grid {
+  max-width: 80rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+  color: #3b82f6;
+}
+
+.cardTitle {
+  font-weight: bold;
+  color: white;
+  margin: 0;
+}
+
+.cardDescription {
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .features {
+    padding: 8rem 1rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .title {
+    font-size: 1.875rem;
+  }
+}

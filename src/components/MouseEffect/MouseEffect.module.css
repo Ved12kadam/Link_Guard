@@ -1,0 +1,7 @@
+.mouseEffect {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  transition: opacity 300ms;
+}
