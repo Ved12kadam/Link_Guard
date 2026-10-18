@@ -1,3 +1,5 @@
+# Link Guard
+
 Link Guard is an AI-powered secure and intelligent URL protection system[cite: 4]. The main objective of this platform is to detect malicious links and provide secure URL shortening services[cite: 4]. The system combines Machine Learning, Rule-Based Detection, and Trusted Domain Verification to effectively identify suspicious and phishing URLs[cite: 4].
 
 ## 🚀 Key Features
@@ -31,10 +33,12 @@ The system uses a hybrid detection approach to improve prediction accuracy and r
 *   **Machine Learning Prediction:** Uses a Random Forest model trained on phishing and safe URL datasets[cite: 4, 10]. 
 *   **Rule-Based Analysis:** Analyzes URLs for suspicious patterns such as fake domains, excessive subdomains, insecure HTTP usage, and suspicious keywords[cite: 8].
 *   **Trusted Domain Verification:** Cross-checks the URL against a database of known safe domains[cite: 4, 10].
+##Sceenshots
+<img width="963" height="1300" alt="image" src="https://github.com/user-attachments/assets/185f13c8-9b5c-4c83-a44a-174009db2fe9" />
+<img width="949" height="429" alt="image" src="https://github.com/user-attachments/assets/3db847cf-7f92-4136-b603-270e64321588" />
+<img width="949" height="429" alt="image" src="https://github.com/user-attachments/assets/0bc92921-56a2-47b3-8974-f62365442a3e" />
+<img width="925" height="894" alt="image" src="https://github.com/user-attachments/assets/308d3288-f164-4472-b0b6-e7815358bdc1" />
 
-##Screenshots 
-<img width="932" height="1250" alt="image" src="https://github.com/user-attachments/assets/5caa2482-f783-4f20-b005-d4858cd8b871" /># Link Guard
-<img width="963" height="1300" alt="image" src="https://github.com/user-attachments/assets/3f5c2795-e87d-459f-93ee-a4fba0f11992" />
-<img width="963" height="1300" alt="image" src="https://github.com/user-attachments/assets/441f2aa3-d444-4667-8d69-568022e73823" />
-<img width="932" height="1250" alt="image" src="https://github.com/user-attachments/assets/8e80ec77-d240-4a78-8d51-4a8dfaa36afe" />
-<img width="925" height="894" alt="image" src="https://github.com/user-attachments/assets/b5b823c6-24bd-4b34-9153-0d7ce644dea4" />
+*   **Ved Ashok Kadam**[cite: 1]
+*   **Yash Dattatray Dubal**[cite: 1]
+*   **Project Guide:** Dr. Ritu Jain[cite: 2]
