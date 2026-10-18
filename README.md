@@ -33,12 +33,3 @@ The system uses a hybrid detection approach to improve prediction accuracy and r
 *   **Machine Learning Prediction:** Uses a Random Forest model trained on phishing and safe URL datasets[cite: 4, 10]. 
 *   **Rule-Based Analysis:** Analyzes URLs for suspicious patterns such as fake domains, excessive subdomains, insecure HTTP usage, and suspicious keywords[cite: 8].
 *   **Trusted Domain Verification:** Cross-checks the URL against a database of known safe domains[cite: 4, 10].
-
-## 👥 Team 
-
-This project was developed in partial fulfillment for the award of the degree of M.C.A. (Semester II, 2025-2026) at DY Patil Deemed to be University, Navi Mumbai[cite: 1]. 
-
-*   **Sohan Rahul Patil**[cite: 1]
-*   **Ved Ashok Kadam**[cite: 1]
-*   **Yash Dattatray Dubal**[cite: 1]
-*   **Project Guide:** Dr. Ritu Jain[cite: 2]
